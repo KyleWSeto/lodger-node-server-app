@@ -1,0 +1,25 @@
+{
+  "name": "lodger-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web server for the Lodger application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleWSeto/lodger-node-server-app.git"
+  },
+  "keywords": [
+    "Node",
+    "Rest",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Kyle Seto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyleWSeto/lodger-node-server-app/issues"
+  },
+  "homepage": "https://github.com/KyleWSeto/lodger-node-server-app#readme"
+}
