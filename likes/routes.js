@@ -25,7 +25,7 @@ function LikesRoutes(app) {
   app.get("/api/likes", findAllLikes);
   app.post("/api/users/:userId/likes/:hotelId", createUserLikesHotel);
   app.get("/api/users/:userId/likes", findHotelsUserLikes);
-  app.get("/api/albums/:hotelId/likes", findUsersWhoLikeHotel);
+  app.get("/api/hotels/:hotelId/likes", findUsersWhoLikeHotel);
 }
 
 export default LikesRoutes;

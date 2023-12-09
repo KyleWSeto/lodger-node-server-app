@@ -6,16 +6,17 @@ function ReviewsRoutes(app) {
         res.json(status);
       };
       const findReviewsForUser = async (req, res) => {
-        const reviews = await dao.findReviewsForUser();
-        res.json(reviews);
+        const { userId } = req.params;
+        const reviews = await dao.findReviewsForUser(userId);
+        res.send(reviews);
       };
       const createReview = async (req, res) => {
         const review = await dao.createReview(req.body);
         res.json(review);
       };
-      app.post("/api/users/:userId/reviews", createReview);
-      app.get("/api/users/:userId/reviews", findReviewsForUser);
       app.delete("/api/reviews/:reviewId", deleteReview);
+      app.get("/api/users/:userId/reviews", findReviewsForUser);
+      app.post("/api/users/:userId/reviews", createReview);
 }
 
 export default ReviewsRoutes;
