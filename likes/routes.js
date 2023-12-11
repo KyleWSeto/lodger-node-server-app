@@ -11,6 +11,11 @@ function LikesRoutes(app) {
     const like = await dao.createUserLikesHotel(userId, hotelId);
     res.send(like);
   };
+  const deleteUserLikesHotel = async (req, res) => {
+    const { userId, hotelId } = req.params;
+    const status = await dao.deleteUserLikesHotel(userId, hotelId);
+    res.send(status);
+  };
   const findHotelsUserLikes = async (req, res) => {
     const { userId } = req.params;
     const likes = await dao.findHotelsUserLikes(userId);
@@ -24,6 +29,7 @@ function LikesRoutes(app) {
 
   app.get("/api/likes", findAllLikes);
   app.post("/api/users/:userId/likes/:hotelId", createUserLikesHotel);
+  app.delete("/api/users/:userId/likes/:hotelId", deleteUserLikesHotel);
   app.get("/api/users/:userId/likes", findHotelsUserLikes);
   app.get("/api/hotels/:hotelId/likes", findUsersWhoLikeHotel);
 }
