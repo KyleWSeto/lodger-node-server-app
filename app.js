@@ -6,6 +6,7 @@ import UserRoutes from "./users/routes.js";
 import FollowsRoutes from "./follows/routes.js";
 import LikesRoutes from "./likes/routes.js";
 import ReviewsRoutes from "./reviews/routes.js";
+import HotelsRoutes from "./hotels/routes.js";
 mongoose.connect("mongodb://127.0.0.1:27017/Lodger");
 
 const app = express();
@@ -30,4 +31,5 @@ FollowsRoutes(app);
 LikesRoutes(app);
 UserRoutes(app);
 ReviewsRoutes(app);
+HotelsRoutes(app);
 app.listen(4000);
