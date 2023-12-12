@@ -6,5 +6,4 @@ export const createUserLikesHotel = (userId, hotelId) =>
 export const deleteUserLikesHotel = (userId, hotelId) =>
   model.deleteOne({ user: userId, hotelId: hotelId });
 export const findHotelsUserLikes = (userId) => model.find({ user: userId });
-export const findUsersWhoLikeHotel = (hotelId) =>
-  model.find({ hotelId: hotelId });
+export const findUsersWhoLikeHotel = (hotelId) => model.find( { hotelId : hotelId });

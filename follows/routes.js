@@ -29,10 +29,7 @@ function FollowsRoutes(app) {
 
   app.get("/api/follows", findAllFollows);
   app.post("/api/users/:followerId/follows/:followedId", createUserFollowsUser);
-  app.delete(
-    "/api/users/:followerId/follows/:followedId",
-    deleteUserFollowsUser
-  );
+  app.delete("/api/users/:followerId/follows/:followedId", deleteUserFollowsUser);
   app.get("/api/users/:userId/following", findUsersFollowedByUser);
   app.get("/api/users/:userId/followers", findUsersFollowingUser);
 }
