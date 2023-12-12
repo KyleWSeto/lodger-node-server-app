@@ -2,7 +2,8 @@ import * as dao from "./dao.js";
 
 function ReviewsRoutes(app) {
     const deleteReview = async (req, res) => {
-        const status = await dao.deleteReview(req.params.review);
+        const { reviewId } = req.params;
+        const status = await dao.deleteReview(reviewId);
         res.json(status);
       };
       const findReviewsForUser = async (req, res) => {
