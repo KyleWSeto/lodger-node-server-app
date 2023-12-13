@@ -2,7 +2,6 @@ import * as dao from "./dao.js";
 
 function LikesRoutes(app) {
   const findAllLikes = async (req, res) => {
-    console.log("findAllLikes");
     const likes = await dao.findAllLikes();
     res.send(likes);
   };
